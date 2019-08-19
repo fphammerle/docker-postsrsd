@@ -9,6 +9,7 @@ USER postsrsd
 
 VOLUME /etc/postsrsd/secrets
 
+# https://github.com/roehling/postsrsd/blob/1.6/postsrsd.c#L342
 ENV SRS_DOMAIN change-me.tld
 ENV SRS_SECRET /etc/postsrsd/secrets/list
 
