@@ -1,0 +1,17 @@
+version: '2'
+
+volumes:
+  secrets:
+
+services:
+  postsrsd:
+    build: .
+    image: fphammerle/postsrsd
+    volumes:
+    - secrets:/etc/postsrsd/secrets:rw
+    environment:
+      SRS_DOMAIN: change-me.tld
+    security_opt: [no-new-privileges]
+    restart: always
+
+# https://docs.docker.com/compose/compose-file/compose-file-v2/
