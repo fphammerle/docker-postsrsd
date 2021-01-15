@@ -1,6 +1,6 @@
-FROM alpine:3.12.3
+FROM alpine:3.13.0
 
-ARG POSTSRSD_PACKAGE_VERSION=1.6-r3
+ARG POSTSRSD_PACKAGE_VERSION=1.10-r0
 RUN adduser -S postsrsd \
     && apk add --no-cache postsrsd=$POSTSRSD_PACKAGE_VERSION \
     && mkdir -p /etc/postsrsd/secrets \
