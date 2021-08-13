@@ -1,4 +1,4 @@
-FROM alpine:3.14.0
+FROM alpine:3.14.1
 
 ARG POSTSRSD_PACKAGE_VERSION=1.11-r0
 RUN adduser -S postsrsd \
