@@ -1,4 +1,4 @@
-FROM docker.io/alpine:3.18.5
+FROM docker.io/alpine:3.19.0
 
 # https://git.alpinelinux.org/aports/log/community/postsrsd?h=3.18-stable
 ARG POSTSRSD_PACKAGE_VERSION=2.0.4-r1
