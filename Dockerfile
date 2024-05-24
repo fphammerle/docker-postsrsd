@@ -1,7 +1,8 @@
-FROM docker.io/alpine:3.19.1
+FROM docker.io/alpine:3.20.0
 
-# https://git.alpinelinux.org/aports/log/community/postsrsd?h=3.19-stable
-ARG POSTSRSD_PACKAGE_VERSION=2.0.8-r0
+# https://github.com/roehling/postsrsd/blob/main/CHANGELOG.rst
+# https://git.alpinelinux.org/aports/log/community/postsrsd?h=3.20-stable
+ARG POSTSRSD_PACKAGE_VERSION=2.0.9-r0
 RUN adduser -S postsrsd \
     && apk add --no-cache postsrsd=$POSTSRSD_PACKAGE_VERSION \
     && mkdir -p /etc/postsrsd/secrets \
