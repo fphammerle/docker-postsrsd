@@ -5,8 +5,17 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+### Changed
+- expose tcp port 10003 instead of 10001 & 10002
+  (postsrsd v2 uses "socketmap:" instead of "tcp:" tables)
+
+### Removed
+- environment variables `SRS_DOMAIN` & `SRS_SECRET`
+  (settings moved to `/etc/postsrsd/postsrsd.conf` in postsrsd v2)
+
 ### Fixed
 - dockerfile: prefix registry in `FROM` instruction (for `podman build`)
+- set path of secrets file in postsrsd's config file (compatible with v[0.1.1])
 
 ## [0.1.1] - 2019-08-19
 ### Fixed
