@@ -25,6 +25,7 @@ USER postsrsd
 ENV POSTSRSD_SECRET_PATH=${POSTSRSD_SECRET_PATH}
 EXPOSE 10003/tcp
 CMD set -x; \
+    umask 0077; \
     if [ ! -s "$POSTSRSD_SECRET_PATH" ]; then \
       tr -dc '1-9a-zA-Z' < /dev/random | head -c 32 > "$POSTSRSD_SECRET_PATH"; \
     fi \

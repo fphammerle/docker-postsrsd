@@ -8,6 +8,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 - expose tcp port 10003 instead of 10001 & 10002
   (postsrsd v2 uses "socketmap:" instead of "tcp:" tables)
+- umask `0077` to initialize secrets file with minimal permissions
 
 ### Removed
 - environment variables `SRS_DOMAIN` & `SRS_SECRET`
