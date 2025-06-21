@@ -8,6 +8,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 - expose tcp port 10003 instead of 10001 & 10002
   (postsrsd v2 uses "socketmap:" instead of "tcp:" tables)
+- configure postsrsd to listen on all ipv4 interfaces (default: loopback only)
 - umask `0077` to initialize secrets file with minimal permissions
 
 ### Removed

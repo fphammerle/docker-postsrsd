@@ -15,6 +15,8 @@ RUN adduser -S postsrsd \
     && apk add --no-cache postsrsd=$POSTSRSD_PACKAGE_VERSION \
     && sed -i 's/^\(\(unprivileged-user\|chroot-dir\) = "\).*"/\1"/' \
          /etc/postsrsd/postsrsd.conf \
+    && sed -i 's/^\(socketmap = inet:\)localhost\(\:10003\)$/\10.0.0.0\2/' \
+         /etc/postsrsd/postsrsd.conf \
     && mkdir --mode 700 "${POSTSRSD_SECRET_DIR_PATH}" \
     && chown postsrsd "${POSTSRSD_SECRET_DIR_PATH}" \
     && sed -i 's#^\(secrets-file = "\).*#\1'"${POSTSRSD_SECRET_PATH}\"#" \
