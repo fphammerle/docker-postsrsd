@@ -1,4 +1,4 @@
-FROM docker.io/alpine:3.23.0
+FROM docker.io/alpine:3.23.2
 
 # https://github.com/roehling/postsrsd/blob/main/CHANGELOG.rst
 # https://git.alpinelinux.org/aports/log/community/postsrsd?h=3.22-stable
