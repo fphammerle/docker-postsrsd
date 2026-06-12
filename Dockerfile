@@ -1,8 +1,8 @@
-FROM docker.io/alpine:3.23.4
+FROM docker.io/alpine:3.24.0
 
 # https://github.com/roehling/postsrsd/blob/main/CHANGELOG.rst
-# https://git.alpinelinux.org/aports/log/community/postsrsd?h=3.22-stable
-ARG POSTSRSD_PACKAGE_VERSION=2.0.11-r0
+# https://git.alpinelinux.org/aports/log/community/postsrsd?h=3.24-stable
+ARG POSTSRSD_PACKAGE_VERSION=2.0.12-r0
 # default in /etc/postsrsd/postsrsd.conf:
 # > secrets-file = "/etc/postsrsd/postsrsd.secret"
 ARG POSTSRSD_SECRET_DIR_PATH=/etc/postsrsd/secrets
