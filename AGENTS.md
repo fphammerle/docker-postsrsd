@@ -47,6 +47,12 @@
   history that's already landed (or been reviewed) and leaves a dangling branch that no longer
   reflects what merged. For a follow-up change, create a **new** branch (from current `master`)
   and a **new** PR instead.
+  - This has happened despite this rule, so before **every** amend / push to an existing branch,
+    first fetch its PR's current state from GitHub — pull requests may have been merged since you
+    last looked.
+- After a branch has been **fully** merged into `master`, delete it (on GitHub and locally). If
+  only a subset of its commits was merged, keep it and rebase the remaining commits onto `master`
+  instead (`git rebase --onto origin/master <last merged commit>`).
 
 ## Merging pull requests
 
