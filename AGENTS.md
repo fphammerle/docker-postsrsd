@@ -119,6 +119,7 @@
   a GitHub code search for `user:fphammerle filename:AGENTS.md`.
 - Creating an `AGENTS.md` for a repository: base it on **all** of them, not just one. Start from
   the closest sibling, keep only the rules that fit the particular repository (e.g. no Python /
-  `Pipfile` rules for a `Dockerfile`-only repository), and adapt repository-specific examples
+  `Pipfile` rules for a `Dockerfile`-only repository, no rules on `Dockerfile` version pins for a
+  repository without a `Dockerfile`), and adapt repository-specific examples
   (e.g. package names, commit subject conventions from `git log`). In the commit message, reference
   the individual source each part was based on with full permanent URLs (commit hash + path).
